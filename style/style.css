@@ -1,0 +1,28 @@
+.navbar-default{
+    background-color: #fff;
+}
+a.cabinet span{
+    border: 1px solid #95d723;
+    border-radius: 18px;
+    color: #000;
+    padding: 8px 36px;
+    font-weight: 700;
+}
+.navbar-default .navbar-nav > li > a.navbar-menu-item{
+    color: #000;
+    font-weight: 700;
+}
+.navbar-menu-item span{
+    padding-right: 25px;
+    border-right: 2px solid #000;
+}
+
+.navbar.navbar-default{
+    margin-bottom: 0;
+}
+a.lang span{
+    border: 1px solid #cdcdcd;
+    border-radius: 18px;
+    padding: 3px 9px;
+    font-weight: 700;
+}
