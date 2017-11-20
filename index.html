@@ -5,8 +5,12 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/jquery-ui.min.css">
     <link rel="stylesheet" href="style/style.css">
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <!--<header class="header">
@@ -35,19 +39,22 @@
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav"
+                    aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img src="finish/favicon.jpg" alt="logo" style="width: 120px;"></a>
+            <a href="#"><img src="finish/favicon.jpg" alt="logo" class="logo"></a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav">
-                <li><a href="#" class="navbar-menu-item"><span>Взять кредит</span></a></li>
-                <li><a href="#" class="navbar-menu-item"><span>Вернуть кредит</span></a></li>
-                <li><a href="#" class="navbar-menu-item"><span>О нас</span></a></li>
-                <li><a href="#" class="navbar-menu-item"><span>Новости</span></a></li>
-                <li><a href="#" class="navbar-menu-item"><span>Справка</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>Взять кредит</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>Вернуть кредит</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>О нас</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>Новости</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>Справка</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" class="lang"><span>UA</span></a></li>
@@ -57,9 +64,82 @@
     </div>
 </nav>
 
-<section>
-
+<section class="section1">
+    <div class="container">
+        <div class="row">
+            <h1 class="title">Кредит на карту до <span class="green-text">10000 грн.</span> на <span class="green-text">90 дней</span>
+                за <span class="green-text">8 минут</span></h1>
+            <div class="col-md-7">
+                <div class="gifts-ellipse">
+                    <div class="text">
+                        <div class="ellipse-text">
+                            Под <span class="blue-text percent">0%</span> до <span class="blue-text">500 грн.</span>*
+                        </div>
+                    </div>
+                </div>
+                <img src="img/gifts.png" alt="gifts" class="gifts">
+                <div class="stock">
+                    Подробно об акции*
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="slider-wrapper">
+                    <h3 class="green-text">Какая сумма вам нужна?</h3>
+                    <div>
+                        <input class="slider-input" id="sliderSum-input" type="text" value="1000"> <span> грн.</span>
+                    </div>
+                    <div class="slider-limits">
+                        <span>100</span>
+                        <span class="pull-right">10000</span>
+                    </div>
+                    <div class="slider" id="sliderSum"></div>
+                    <div class="get-money">
+                        <button class="green-button">Получить деньги</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section class="section2">
+    <div class="container">
+        <div class="row">
+            <h1 class="title">
+                Как получить кредит в <span class="green-text">QUICK</span><span class="dark-blue-text">MONEY</span>
+            </h1>
+            <div class="long-line">
+                <div class="short-line"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: url(img/video-bg.png); width: 636px; height:397px; background-size: cover; position: relative; top: 0;left: -35px;">
+                <iframe class="video" width="490" height="292" src="https://www.youtube.com/embed/RswdKYsJquw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ol">
+                <div class="round-number">1</div>
+                Выберите сумму
+            </div>
+            <div class="ol">
+                <div class="round-number">2</div>
+                Заполните анкету
+            </div>
+            <div class="ol">
+                <div class="round-number">3</div>
+                Укажите банковскую карту
+            </div>
+            <div class="ol">
+                <div class="round-number">4</div>
+                Получите деньги
+            </div>
+            <button class="green-button">Оформить заявку</button>
+        </div>
+    </div>
+</section>
+<section class="section3">
+    <h1 class="title">Наши преимущества</h1>
+</section>
 </body>
 </html>
