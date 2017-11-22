@@ -222,7 +222,9 @@ h1.title {
     margin: 0 auto;
 }
 
-.section2 .long-line {
+.section2 .long-line, .section3 .long-line,
+.section4 .long-line, .section5 .long-line,
+.section6 .long-line, .section7 .long-line {
     background-color: #ccc;
 }
 
@@ -310,10 +312,6 @@ h1.title {
     background-color: #439af3;
 }
 
-.section3 .long-line, .section6 .long-line {
-    background-color: #ccc;
-}
-
 .advantage-block {
     color: #fff;
     margin-bottom: 32px;
@@ -329,18 +327,18 @@ h1.title {
 .advantages-subtitle {
     font-size: 20px;
     text-transform: uppercase;
-     margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-.advantage-block span{
+.advantage-block span {
     font-size: 16px;
 }
 
-.advantage-left{
+.advantage-left {
     text-align: right;
 }
 
-.advantage-left, .advantage-right{
+.advantage-left, .advantage-right {
     margin-bottom: 72px;
 }
 
@@ -380,53 +378,55 @@ h1.title {
     margin-right: 30px;
 }
 
-.section4{
+.section4 {
     background: url(../img/bg.png);
     background-size: cover;
     text-align: center;
     font-size: 20px;
-    padding-bottom: 70px;
 }
 
-.section4 .long-line, .section5 .long-line{
-    background-color: #ccc;
-}
-
-.section4 .short-line, .section5 .short-line, .section6 .short-line{
+.section4 .short-line, .section5 .short-line, .section6 .short-line {
     background-color: #439af3;
     margin-bottom: 50px;
 }
 
-.dashed-img{
+.dashed-img {
     width: 181px;
     height: 181px;
     border: 3px dashed #439af3;
     border-radius: 50%;
     margin: 0 auto 31px;
 }
-.dotted-url{
+
+.dotted-url {
     color: #150faf;
     text-decoration: none;
     border-bottom: 1px dotted #150faf
 }
 
-.section4 .row .col-md-4:nth-last-of-type(3) .dashed-img{
+.section4 .row .col-md-4:nth-last-of-type(3) .dashed-img {
     background: url(../img/p1.png) #fdfdfd 49px 50px no-repeat;
 }
-.section4 .row .col-md-4:nth-last-of-type(2) .dashed-img{
+
+.section4 .row .col-md-4:nth-last-of-type(2) .dashed-img {
     background: url(../img/p2.png) #fdfdfd 66px 49px no-repeat;
 }
-.section4 .row .col-md-4:nth-last-of-type(1) .dashed-img{
+
+.section4 .row .col-md-4:nth-last-of-type(1) .dashed-img {
     background: url(../img/p3.png) #fdfdfd 50px 44px no-repeat;
 }
 
-.section5{
+.section4 .col-md-4 {
+    margin-bottom: 70px;
+}
+
+.section5 {
     background: #f5f5f5;
     padding-bottom: 68px;
     text-align: center;
 }
 
-.review{
+.review {
     box-shadow: 2px 3px 5px 0px rgba(18, 0, 0, 0.3);
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -436,37 +436,97 @@ h1.title {
     text-align: left;
 }
 
-.review-title{
+.review-title {
     font-size: 20px;
     font-weight: bold;
 }
-.review-date{
+
+.review-date {
     font-size: 14px;
     font-weight: bold;
     color: #666;
     margin: 5px 0 6px;
 }
-.review-text{
+
+.review-text {
     font-size: 16px;
 }
 
-.section5 .green-button{
+.section5 .green-button {
     margin-top: 50px;
     width: 476px;
 }
 
-.section6{
+.section6 {
     background: linear-gradient(to left, #2669b7, #399cd5);
     padding-bottom: 36px;
 }
 
-.section6 .row{
+.section6 .city {
     margin-bottom: 30px;
 }
 
-.city{
+.city {
     background: url(../img/city-arrow.png) #fff 21px 25px no-repeat;
     padding: 18px 17px 18px 52px;
     border-radius: 4px;
     font-size: 20px;
+}
+
+.more-cities {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section7 .short-line {
+    background-color: #439af3;
+    margin-bottom: 72px;
+}
+
+.question-title {
+    font-size: 20px;
+    background-color: #e6e6e6;
+    text-transform: uppercase;
+    padding: 20px;
+    color: #0800ab;
+    display: block;
+}
+
+.section7 .panel {
+    margin-bottom: 25px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.question-title:hover,.question-title:focus  {
+    color: #0800ab;
+    text-decoration: none;
+}
+
+.question-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.question-text.collapse.in{
+    padding: 18px 122px 22px 42px;
+}
+
+.switch{
+    background: url(../img/switch.png);
+    width: 30px;
+    height: 18px;
+    float: right;
+    margin-top: 6px;
+}
+
+.panel .question-title.collapsed .switch{
+    transform: rotate(180deg);
+}
+
+.panel .question-title .switch{
 }
