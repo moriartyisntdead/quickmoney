@@ -248,22 +248,11 @@ h1 .green-text {
     font-size: 20px;
 }
 
-.navbar-header {
-    margin-left: 83px !important;
-}
-
 .gifts {
-    /*    position: absolute;
-        right: 71px;
-        top: 82px;*/
     position: absolute;
     right: 71px;
     top: 133px;
     width: 723px;
-}
-
-.navbar-right {
-    margin-right: 66px;
 }
 
 .gifts-ellipse {
@@ -272,8 +261,6 @@ h1 .green-text {
     border-radius: 50%;
     background: url(../img/ellipse.png) no-repeat;
     position: absolute;
-    /*top: -17px;*/
-    /*right: 106px;*/
     top: 28px;
     right: 95px;
 }
@@ -300,20 +287,9 @@ h1 .green-text {
     font-size: 20px;
 }
 
-.blue-text.percent {
+.percent {
     font-size: 62px;
-}
-
-.stock {
-    display: block;
-    background: url(../img/stock.png) no-repeat 0 center;
-    padding-left: 42px;
-    text-decoration: underline;
-    font-size: 15px;
-    position: absolute;
-    top: 381px;
-    right: -3px;
-    color: #000;
+    color: #439af3;
 }
 
 .slider-limits {
@@ -784,7 +760,7 @@ footer {
 .social-link:nth-of-type(2) .fa.fa-instagram {
     position: relative;
     top: 3px;
-    left: -8px;
+    left: -9px;
 }
 
 .social-link:nth-of-type(3) .fa.fa-facebook {
@@ -942,15 +918,15 @@ footer .logo {
     }
 }
 
-.owl-stage-outer{
+.owl-stage-outer {
     padding-bottom: 4px;
 }
 
-.owl-dots{
+.owl-dots {
     margin: 0 auto;
 }
 
-.owl-dot{
+.owl-dot {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -961,14 +937,46 @@ footer .logo {
     border-radius: 30px;
 }
 
-@media all and (max-width: 1199px){
-    .navbar-header{
-        margin-left: 0 !important;
-    }
+@media all and (max-width: 1199px) {
     .navbar-right {
-        margin-right: 0px;
-    }
-    .logo{
         margin-right: 0;
     }
+
+    .logo {
+        margin-right: 0;
+    }
+}
+
+.stock {
+    display: block;
+    padding: 5px 7px;
+    font-size: 15px;
+    position: absolute;
+    top: 368px;
+    right: -3px;
+    border: 1px solid #95d723;
+    border-radius: 18px;
+    font-weight: 700;
+    background-color: transparent;
+    color: #fff;
+    transition: all 400ms ease;
+}
+
+.stock:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #95d723;
+    transition: all 400ms ease;
+}
+
+.stock-star {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    font-size: 18px;
+}
+
+.navbar-nav{
+    margin-left: 78px;
 }

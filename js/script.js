@@ -6,7 +6,7 @@ $(function () {
 
     $(".owl-carousel").owlCarousel({
         nav: true,
-        navText: [$('.carousel-left'),$('.carousel-right')],
+        navText: [$('.carousel-left'), $('.carousel-right')],
         items: 2,
         margin: 30,
         dots: true,
@@ -41,6 +41,8 @@ $(function () {
         }
     });
 
+    $('#sliderSum').draggable();
+
     $('#sliderSum-input').change(function () {
         var sliderName = $(this).prop('id');
         sliderName = sliderName.substr(0, sliderName.length - 6);
@@ -65,10 +67,25 @@ $(function () {
 
 
     //скролл с фиксированной шапкой
-    $('a').on('click', function(){
-        if(this.hash) $(document).data('h',1);
+
+    $(".navbar").on("click", "a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top - 90;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 800);
     });
-    $(document).scroll(function(){
-        if($(this).data('h')) $(this).data('h',0).scrollTop($(this).scrollTop()-90);
-    });
+
+    // $('a').on('click', function () {
+    //     if (this.hash) $(document).data('h', 1);
+    // });
+    // $(document).scroll(function () {
+    //     if ($(this).data('h')) $(this).data('h', 0).scrollTop($(this).scrollTop() - 90);
+    // });
 });
