@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/animate.css">
     <link rel="stylesheet" href="style/owl.carousel.min.css">
-    <!--<link rel="stylesheet" href="style/owl.theme.default.min.css">-->
+    <link rel="stylesheet" href="style/owl.theme.default.min.css">
     <link rel="stylesheet" href="style/style.css?v=2">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav"
@@ -30,28 +30,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#"><img src="finish/favicon.jpg" alt="logo" class="logo"></a>
+            <a href="#"><img src="img/favicon.png" alt="logo" class="logo"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav">
-                <li class="navbar-menu-item"><a href="#"><span>Взять кредит</span></a></li>
-                <li class="navbar-menu-item"><a href="#"><span>Вернуть кредит</span></a></li>
+                <li class="navbar-menu-item"><a href="#how-to-earn"><span>Взять кредит</span></a></li>
+                <li class="navbar-menu-item"><a href="#how-to-return"><span>Вернуть кредит</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>О нас</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>Новости</span></a></li>
+                <li class="navbar-menu-item"><a href="#"><span>Справка</span></a></li>
                 <li role="presentation" class="dropdown navbar-menu-item">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                        aria-expanded="false">
                         Услуги <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="transition: none">
                         <li><a href="javascript:void(1)">Услуга 1</a></li>
                         <li><a href="javascript:void(1)">Услуга 2</a></li>
                         <li><a href="javascript:void(1)">Услуга 3</a></li>
                     </ul>
                 </li>
-
-                <li class="navbar-menu-item"><a href="#"><span>О нас</span></a></li>
-                <li class="navbar-menu-item"><a href="#"><span>Новости</span></a></li>
-                <li class="navbar-menu-item"><a href="#"><span>Справка</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" class="lang"><span>UA</span></a></li>
@@ -64,7 +63,7 @@
 <section class="section1">
     <div class="container">
         <div class="row">
-            <h1 class="title">Кредит на карту до <span class="green-text">10000 грн.</span> на <span class="green-text">90 дней</span>
+            <h1 class="title">Кредит на карту до <span class="green-text">10 000 грн</span> на <span class="green-text">90 дней</span>
                 за <span class="green-text">8 минут</span></h1>
             <div class="col-md-7 hidden-xs">
                 <div class="gifts-ellipse">
@@ -75,20 +74,18 @@
                     </div>
                 </div>
                 <img src="img/gifts.png" alt="gifts" class="gifts">
-                <!--<div class="stock">-->
-                <!--Подробно об акции*-->
-                <!--</div>-->
+                <a href="#" class="stock">Подробно об акции*</a>
             </div>
             <div class="col-md-4">
                 <div class="slider-wrapper">
                     <h3 class="green-text">Какая сумма вам нужна?</h3>
-                    <div>
-                        <input class="slider-input" id="sliderSum-input" type="text" value="1000"> <span> грн.</span>
-                    </div>
+                    <input class="slider-input" id="sliderSum-input" type="text" value="1000"> <span> грн</span>
                     <div class="slider-limits">
                         <span>100</span>
                         <span class="pull-right">10000</span>
                     </div>
+                    <span class="sliderControlButton slider-minus" data-type="minus" data-slider="sliderSum"></span>
+                    <span class="sliderControlButton slider-plus" data-type="plus" data-slider="sliderSum"></span>
                     <div class="slider" id="sliderSum"></div>
                     <div class="get-money">
                         <button class="green-button">Получить деньги</button>
@@ -99,7 +96,7 @@
     </div>
 </section>
 
-<section class="section2">
+<section class="section2" id="how-to-earn">
     <div class="container">
         <div class="row">
             <h1 class="title">
@@ -130,7 +127,9 @@
                     <div class="round-number">4</div>
                     Получите деньги
                 </div>
-                <button class="green-button">Оформить заявку</button>
+                <div class="col-md-4">
+                    <button class="green-button">Оформить заявку</button>
+                </div>
             </div>
         </div>
     </div>
@@ -198,7 +197,7 @@
     </div>
 </section>
 
-<section class="section4" data-parallax="scroll" data-image-src="img/bg.png">
+<section class="section4" id="how-to-return" data-parallax="scroll" data-image-src="img/bg.png">
     <div class="container">
         <div class="row">
             <h1 class="title">Как погасить кредит в <span class="green-text">QUICK</span><span
@@ -228,13 +227,12 @@
             <h1 class="title">Отзывы наших клиентов</h1>
             <div class="long-line"></div>
             <div class="short-line"></div>
-            <div class="col-md-1">
-                <img src="img/carousel-left.png" alt="left">
-            </div>
+            <div class="carousel-left"><i class="fa fa-chevron-left"></i></div>
             <div class="owl-carousel">
-                <div class="col-md-10">
+                <div class="item">
                     <div class="review">
-                        <span class="review-title">Дмитрий Александрович <img src="img/test.png" alt="review-photo"/></span>
+                        <span class="review-title">1Дмитрий Александрович <img src="img/test.png"
+                                                                               alt="review-photo"/></span>
                         <div class="review-date">25 октября 2017</div>
                         <div class="review-text">
                             Мне очень понравился сервис MyCredit, в особенности скорость принятия
@@ -245,9 +243,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-10">
+                <div class="item">
                     <div class="review">
-                        <span class="review-title">Дмитрий Александрович <img src="img/test.png" alt="review-photo"></span>
+                        <span class="review-title">2Дмитрий Александрович <img src="img/test.png"
+                                                                               alt="review-photo"></span>
                         <div class="review-date">25 октября 2017</div>
                         <div class="review-text">
                             Мне очень понравился сервис MyCredit, в особенности скорость принятия
@@ -258,9 +257,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-10">
+                <div class="item">
                     <div class="review">
-                        <span class="review-title">Дмитрий Александрович <img src="img/test.png" alt="review-photo"></span>
+                        <span class="review-title">3Дмитрий Александрович <img src="img/test.png"
+                                                                               alt="review-photo"></span>
                         <div class="review-date">25 октября 2017</div>
                         <div class="review-text">
                             Мне очень понравился сервис MyCredit, в особенности скорость принятия
@@ -272,71 +272,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1">
-                <img src="img/carousel-right.png" alt="right">
-            </div>
+            <div class="carousel-right"><i class="fa fa-chevron-right"></i></div>
             <button class="green-button">Хочу стать вашим клиентом</button>
         </div>
     </div>
 </section>
-
-<!--<section class="section5">-->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<h1 class="title">Отзывы наших клиентов</h1>-->
-            <!--<div class="long-line"></div>-->
-            <!--<div class="short-line"></div>-->
-            <!--<div class="col-md-1">-->
-                <!--<img src="img/carousel-left.png" alt="left">-->
-            <!--</div>-->
-            <!--<div class="owl-carousel">-->
-                <!--<div class="col-md-10">-->
-                    <!--<div class="review">-->
-                        <!--<span class="review-title">Дмитрий Александрович <img src="img/test.png" alt="review-photo"/></span>-->
-                        <!--<div class="review-date">25 октября 2017</div>-->
-                        <!--<div class="review-text">-->
-                            <!--Мне очень понравился сервис MyCredit, в особенности скорость принятия-->
-                            <!--решения.-->
-                            <!--Я отдыхала на море и не рассчитала денежные средства, обратилась в MyCredit и была приятно-->
-                            <!--удивлена,-->
-                            <!--деньги пришли в течении 2 минут.-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-10">-->
-                    <!--<div class="review">-->
-                        <!--<span class="review-title">Дмитрий Александрович <img src="img/test.png" alt="review-photo"></span>-->
-                        <!--<div class="review-date">25 октября 2017</div>-->
-                        <!--<div class="review-text">-->
-                            <!--Мне очень понравился сервис MyCredit, в особенности скорость принятия-->
-                            <!--решения.-->
-                            <!--Я отдыхала на море и не рассчитала денежные средства, обратилась в MyCredit и была приятно-->
-                            <!--удивлена,-->
-                            <!--деньги пришли в течении 2 минут.-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-10">-->
-                    <!--<div class="review">-->
-                        <!--<span class="review-title">Дмитрий Александрович <img src="img/test.png" alt="review-photo"></span>-->
-                        <!--<div class="review-date">25 октября 2017</div>-->
-                        <!--<div class="review-text">-->
-                            <!--Мне очень понравился сервис MyCredit, в особенности скорость принятия-->
-                            <!--решения.-->
-                            <!--Я отдыхала на море и не рассчитала денежные средства, обратилась в MyCredit и была приятно-->
-                            <!--удивлена,-->
-                            <!--деньги пришли в течении 2 минут.-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-1">-->
-                <!--<img src="img/carousel-right.png" alt="right">-->
-            <!--</div>-->
-            <!--<button class="green-button">Хочу стать вашим клиентом</button>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
 
 <section class="section6">
     <div class="container">
@@ -438,9 +378,11 @@
             </div>
         </div>
         <div class="more-cities">
-            <img src="img/arrow.png" alt="show more" style="margin: 0 auto 24px; display: block;" data-toggle="collapse"
-                 data-target="#more-cities"
-                 aria-expanded="false" class="toggle-cities">
+            <!--            <img src="img/arrow.png" alt="show more" style="margin: 0 auto 24px; display: block;" data-toggle="collapse"
+                             data-target="#more-cities"
+                             aria-expanded="false" class="toggle-cities .floating">-->
+            <div data-toggle="collapse" data-target="#more-cities" aria-expanded="false"
+                 class="toggle-cities"></div>
             <span>Еще города</span>
         </div>
     </div>
@@ -451,36 +393,114 @@
         <h1 class="title">Часто задаваемые вопросы</h1>
         <div class="long-line"></div>
         <div class="short-line"></div>
-
         <div class="row">
             <div class="col-md-12 panel-group" id="questions" role="tablist" aria-multiselectable="true">
                 <div class="panel">
                     <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
                        href="#collapseOne"
                        aria-expanded="true" aria-controls="collapseOne">
-                        Можно ли продлить (пролонгировать) срок действия договора займа?
+                        Кто и как может получить кредит?
                         <div class="switch"></div>
                     </a>
                     <div class="question-text panel-collapse collapse" id="collapseOne" role="tabpanel"
                          aria-labelledby="headingOne">
-                        Можно, при условии выплаты всех процентов за пользование займом. Для этого необходимо в личном
-                        кабинете заплатить проценты за использование займом и нажать кнопку «пролонгация», система
-                        сделает
-                        все за Вас. Срок, на который возможно продление - 10 дней.
+                        Чтоб получить кредит в Квик Мани необходимо иметь гражданство Украины и находиться
+                        на территории Украины, а также владеть личной банковской картой любого банка Украины. Для
+                        того, чтобы получить кредит, Вам достаточно заполнить заявку на нашем сайте.Займ выдается
+                        только лицам, достигшим 18 лет.
                     </div>
                 </div>
                 <div class="panel">
                     <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Можно ли продлить (пролонгировать) срок действия договора займа?
+                        В каких городах работаем?
                         <div class="switch"></div>
                     </a>
                     <div class="question-text panel-collapse collapse" id="collapseTwo" role="tabpanel"
                          aria-labelledby="headingTwo">
-                        Можно, при условии выплаты всех процентов за пользование займом. Для этого необходимо в личном
-                        кабинете заплатить проценты за использование займом и нажать кнопку «пролонгация», система
-                        сделает
-                        все за Вас. Срок, на который возможно продление - 10 дней.
+                        В связи с тем, что наш сервис полностью онлайн, мы имеем возможность обслуживать
+                        все население Украины. ( Кроме зоны АТО)
+                    </div>
+                </div>
+                <div class="panel">
+                    <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
+                       href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        У меня не получается заполнить анкету-заявку. Что мне делать?
+                        <div class="switch"></div>
+                    </a>
+                    <div class="question-text panel-collapse collapse" id="collapseThree" role="tabpanel"
+                         aria-labelledby="headingThree">
+                        Отнеситесь к процессу заполнения анкеты серьезно и внимательно. Рядом с полями есть
+                        знак подсказки. Если на него навести курсор, появится подсказка что именно следует указывать.
+                    </div>
+                </div>
+                <div class="panel">
+                    <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
+                       href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Что влияет на решение по заявке на кредит?
+                        <div class="switch"></div>
+                    </a>
+                    <div class="question-text panel-collapse collapse" id="collapseFour" role="tabpanel"
+                         aria-labelledby="headingFour">
+                        Главным фактором является кредитная история заявителя на кредит. Чем меньше у Вас
+                        долгов по кредитам, тем выше вероятность положительного решения о выдаче кредита, так же
+                        значение имеют правдивые данные указанные в анкете.
+                    </div>
+                </div>
+                <div class="panel">
+                    <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
+                       href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Зачем на банковской карте блокируется сумма от 1 грн?
+                        <div class="switch"></div>
+                    </a>
+                    <div class="question-text panel-collapse collapse" id="collapseFive" role="tabpanel"
+                         aria-labelledby="headingFive">
+                        Для подтверждения что именно Вы владеете банковской картой, чтобы исключить
+                        возможность использования мошенниками Ваших данных.
+                    </div>
+                </div>
+                <div class="panel">
+                    <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
+                       href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Как узнать заблокированную сумму на банковской карте?
+                        <div class="switch"></div>
+                    </a>
+                    <div class="question-text panel-collapse collapse" id="collapseSix" role="tabpanel"
+                         aria-labelledby="headingSix">
+                        Узнать заблокированную сумму возможно:
+                        <ol>
+                            <li>Получив СМС-сообщение от банка(если подключена эта услуга);</li>
+                            <li>С помощью интернет-банкинга;</li>
+                            <li>Позвонив на номер горячей линии банка и спросив у оператора.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="panel">
+                    <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
+                       href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Как узнать решение по заявке на кредит?
+                        <div class="switch"></div>
+                    </a>
+                    <div class="question-text panel-collapse collapse" id="collapseSeven" role="tabpanel"
+                         aria-labelledby="headingSeven">
+                        Когда решение будет принято, Вы получите смс сообщение на указанный Вами контактный
+                        номер телефона. Также статус заявки на получения кредита можно увидеть в Личном Кабинете.
+                    </div>
+                </div>
+                <div class="panel">
+                    <a class="question-title collapsed" role="button" data-toggle="collapse" data-parent="#questions"
+                       href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Как погасить / продлить кредит?
+                        <div class="switch"></div>
+                    </a>
+                    <div class="question-text panel-collapse collapse" id="collapseEight" role="tabpanel"
+                         aria-labelledby="headingEight">
+                        Оплатить кредит Вы можете в удобное для Вас время, однако не позднее последнего дня
+                        пользования кредитом. Вы платите только лишь за фактическое время пользования кредитными
+                        деньгами. Выберите удобный способ возврата денег:
+                        1. Банковской картой в личном кабинете или через интернет банкинг ;
+                        2. Банковским переводом через отделение банка;
+                        3. Наличными в терминалах самообслуживания .
                     </div>
                 </div>
             </div>
@@ -490,6 +510,7 @@
         </div>
     </div>
 </section>
+
 <section class="section8" data-parallax="scroll" data-image-src="img/bg2.png">
     <div class="container">
         <div class="row">
@@ -558,22 +579,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Пример рассчёта процентной ставки</h2>
-                <p>При оформлении первого кредита - 1000 грн на 14 дней, сумма к оплате составит 1138 грн. При этом
-                    максимальная годовая процентная ставка APR - 547,5%. Мы прекращаем начисление процентов спустя 90
-                    дней после просрочки по кредиту. Поэтому Вам в любом случае не придется возвращать в разы больше,
-                    чем Вы заняли.</p>
-
-                <h2>Сроки погашения кредита на Quickmoney</h2>
-                <p>Минимальный срок погашения долга составляет 1 день.
-                    <br>
-                    Максимальный срок погашения 35 дней.
-                </p>
-                <p>
-                    <br>
-                    Максимальная годовая процентная ставка, включающся ссудный процент, а также все остальные комиссии и
-                    расходы за год 547,5%.
-                </p>
+                <h2>Образец расчета годовой процентной ставки:</h2>
+                <p>При сумме кредита равной 1000 грн плата за пользование средствами составит 17,50 грн в день,
+                    что соответствует процентной ставке, равной 1,75% в день. Максимальная годовая процентная
+                    ставка - 638,75%.</p>
+                <p>Минимальный срок погашения долга – 65 дней, а максимальный – до выполнения Сторонами
+                    всех обязательств по договору.</p>
+                <h2>Финансовая ответственность Заемщика в случае невыполнения обязательств по договору
+                    займа:</h2>
+                <ul>
+                    <li>Может быть начат процесс принудительного взыскания долга в судебном порядке или
+                        возможна передача права требования долга третьим лицам;
+                    </li>
+                    <li>Обязательное начисление повышенной % ставки в размере 2,75% в день через день после
+                        окончания срока действия договора до момента погашения займа и платы за его пользование.
+                    </li>
+                </ul>
+                <h2>Условия продления договора займа:</h2>
+                <p>Заёмщик вправе продлить срок займа, оплатив указанную выше плату за пользование займом.</p>
             </div>
         </div>
     </div>
@@ -624,7 +647,8 @@
                 <address class="footer-adress">04053 г. Киев, ул. Обсерваторная, 13/15</address>
             </div>
             <div class="col-md-3" style="text-align: right">
-                <span class="email">info@quickmoney.com.ua</span>
+                <span class="email"><i class="fa fa-envelope" aria-hidden="true"></i>
+info@quickmoney.com.ua</span>
             </div>
             <div class="col-md-3" style="text-align: right">
                 <a class="social-link" href="javascript:void(1)"><i class="fa fa-google-plus"

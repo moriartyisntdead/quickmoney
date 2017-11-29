@@ -6,8 +6,10 @@ $(function () {
 
     $(".owl-carousel").owlCarousel({
         nav: true,
-        navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+        navText: [$('.carousel-left'),$('.carousel-right')],
         items: 2,
+        margin: 30,
+        dots: true,
         responsive: {
             0: {
                 items: 1
@@ -18,12 +20,10 @@ $(function () {
         }
     });
 
-    //[$('.am-next'),$('.am-prev')]
-
     $('.toggle-cities, .question-title').click(function () {
         setTimeout(function () {
-            $(window).trigger('resize');
-        }, 500);
+            $(window).trigger('resize').trigger('scroll');
+        }, 375);
     });
 
     $('#sliderSum').slider({
@@ -39,5 +39,36 @@ $(function () {
         slide: function (event, ui) {
             $('#sliderSum-input').html(ui.value);
         }
+    });
+
+    $('#sliderSum-input').change(function () {
+        var sliderName = $(this).prop('id');
+        sliderName = sliderName.substr(0, sliderName.length - 6);
+        $('#' + sliderName).slider({
+            value: $(this).val()
+        });
+    });
+
+    $('.sliderControlButton').click(function () {
+        var type = $(this).data('type');
+        var sliderId = $(this).data('slider');
+        var slider = $('#' + sliderId);
+        var current = slider.slider("option", "value");
+        var step = slider.slider("option", "step");
+        slider.find('.ui-slider-handle').css('transition', 'all 1s');
+        if (type == "minus") slider.slider("value", current - step);
+        else if (type == "plus") slider.slider("value", current + step);
+        setTimeout(function () {
+            slider.find('.ui-slider-handle').css('transition', 'none');
+        }, 600);
+    });
+
+
+    //скролл с фиксированной шапкой
+    $('a').on('click', function(){
+        if(this.hash) $(document).data('h',1);
+    });
+    $(document).scroll(function(){
+        if($(this).data('h')) $(this).data('h',0).scrollTop($(this).scrollTop()-90);
     });
 });
