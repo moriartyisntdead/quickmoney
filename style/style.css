@@ -980,3 +980,11 @@ footer .logo {
 .navbar-nav{
     margin-left: 78px;
 }
+
+.section8{
+    background-image: url(../img/bg2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

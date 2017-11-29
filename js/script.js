@@ -20,11 +20,6 @@ $(function () {
         }
     });
 
-    $('.toggle-cities, .question-title').click(function () {
-        setTimeout(function () {
-            $(window).trigger('resize').trigger('scroll');
-        }, 375);
-    });
 
     $('#sliderSum').slider({
         orientation: "horizontal",
