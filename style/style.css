@@ -937,6 +937,10 @@ footer .logo {
     border-radius: 30px;
 }
 
+.owl-dot.active{
+    background: #878585;
+}
+
 @media all and (max-width: 1199px) {
     .navbar-right {
         margin-right: 0;

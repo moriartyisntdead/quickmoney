@@ -4,12 +4,19 @@ $(function () {
     $('.section4').parallax({imageSrc: '../img/bg.png'});
     $('.section8').parallax({imageSrc: '../img/bg2.png'});
 
+    var countCarouselItem = $(".owl-carousel .item").length;
+    //var longLineWidth = parseInt($(".section5 .long-line").css('width'));
+    //var shortLineWidth = longLineWidth/Math.round(countCarouselItem/2);
+    //var $shortLine = $(".section5 .short-line");
+    //$shortLine.css('width', shortLineWidth+'px');
     $(".owl-carousel").owlCarousel({
         nav: true,
         navText: [$('.carousel-left'), $('.carousel-right')],
         items: 2,
         margin: 30,
         dots: true,
+        slideBy: 2,
+        startPosition: Math.round(countCarouselItem/2)-1,
         responsive: {
             0: {
                 items: 1
@@ -17,7 +24,13 @@ $(function () {
             426: {
                 items: 2
             }
-        }
+        },
+        //onTranslate: function(e){
+        //    var ml = 300+(longLineWidth/countCarouselItem*(e.item.index));
+        //    $shortLine.animate({
+        //        'margin-left': ml+'px'
+        //    }, 300);
+        //}
     });
 
 
