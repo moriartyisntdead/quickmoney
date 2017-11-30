@@ -32,6 +32,15 @@ body {
 
 nav.navbar {
     height: 90px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+nav.navbar.scrolling {
+    height: 80px;
 }
 
 .section1 {
@@ -101,6 +110,12 @@ a.lang span {
 
 .collapse.navbar-collapse {
     padding-top: 20px;
+    transition: all 1s;
+}
+
+
+.scrolling .collapse.navbar-collapse {
+    padding-top: 10px;
 }
 
 .logo {

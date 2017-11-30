@@ -109,4 +109,31 @@ $(function () {
         $('html, body').animate({scrollTop: 0}, duration);
         return false;
     });
+
+    var docElem = document.documentElement, didScroll = false, changeHeaderOn = 300;
+    function headerScroll() {
+        window.addEventListener( 'scroll', function( event ) {
+            if( !didScroll ) {
+                didScroll = true;
+                setTimeout(function () {
+                    var sy = scrollY();
+                    var $NAV = $('nav');
+                    if ( sy >= changeHeaderOn ) {
+                        $NAV.addClass('scrolling');
+                        $NAV.find('.logo').attr('src', 'img/favicon_only_logo.png');
+                    }
+                    else {
+                        $NAV.removeClass('scrolling');
+                        $NAV.find('.logo').attr('src', 'img/favicon.png');
+                    }
+                    didScroll = false;
+                    }, 250 );
+            }
+        }, false );
+    }
+    function scrollY() {
+        return window.pageYOffset || docElem.scrollTop;
+    }
+
+    headerScroll();
 });
