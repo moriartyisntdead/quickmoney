@@ -992,3 +992,46 @@ footer .logo {
     background-size: cover;
     background-attachment: fixed;
 }
+
+footer .logo{
+    max-width: 130px;
+    display: inline-block;
+}
+
+footer .company-name{
+    font-size: 15px;
+    vertical-align: text-bottom;
+    color: white;
+}
+
+footer .social-block{
+    text-align: right;
+  
+}
+
+footer .social-block a{
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+@media all and (max-width: 768px) {
+    .section10 .row>div, footer .row>div{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section10 .row>div:last-of-type, footer .row>div:last-of-type {
+        margin-bottom: 0;
+    }
+
+    footer .social-block a i{
+        left: 0!important;
+    }
+}
+
+.underline-link{
+    text-decoration: underline;
+}
