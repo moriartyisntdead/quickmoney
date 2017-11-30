@@ -388,8 +388,8 @@ h1 .green-text {
 
 .video {
     position: relative;
-    top: 34px;
-    left: 75px;
+    top: 23px;
+    left: 80px;
 }
 
 .section3 {
@@ -552,7 +552,7 @@ h1 .green-text {
 }
 
 .section5 .green-button {
-    margin-top: 50px;
+    margin-top: 18px;
 }
 
 .section6 {
@@ -722,15 +722,8 @@ h1 .green-text {
 
 footer {
     background-color: #c5e1d0;
-    padding-top: 32px;
-    padding-bottom: 29px;
-}
-
-.footer-adress {
-    background: url(../img/address.png) left 0px no-repeat;
-    padding-left: 25px;
-    padding-top: 0px;
-    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .social-link {
@@ -989,7 +982,7 @@ footer .logo {
 }
 
 .navbar-nav{
-    margin-left: 78px;
+    margin-left: 64px;
 }
 
 .section8{
