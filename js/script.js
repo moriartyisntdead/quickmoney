@@ -16,7 +16,7 @@ $(function () {
         margin: 30,
         dots: true,
         slideBy: 2,
-        startPosition: Math.round(countCarouselItem/2)-1,
+        startPosition: Math.round(countCarouselItem / 2) - 1,
         responsive: {
             0: {
                 items: 1
@@ -74,20 +74,12 @@ $(function () {
     });
 
 
-    //скролл с фиксированной шапкой
-
+    //Скролл с фиксированной шапкой
     $(".navbar").on("click", "a", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();
-
-        //забираем идентификатор бока с атрибута href
         var id = $(this).attr('href'),
-
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top - 90;
-        if (id=='#how-to-earn') top+=120;
-
-        //анимируем переход на расстояние - top за 1500 мс
+            top = $(id).offset().top - 90;
+        if (id == '#how-to-earn') top += 120;
         $('body,html').animate({scrollTop: top}, 800);
     });
 
@@ -97,4 +89,24 @@ $(function () {
     // $(document).scroll(function () {
     //     if ($(this).data('h')) $(this).data('h', 0).scrollTop($(this).scrollTop() - 90);
     // });
+
+
+    //Кнопка «Вверх»
+    var offset = 450;
+    var duration = 500;
+    var upToTop = $("#up-to-top");
+    upToTop.hide();
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > offset) {
+            upToTop.fadeIn(duration);
+        } else {
+            upToTop.fadeOut(duration);
+        }
+    });
+
+    upToTop.on('click', function (event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    });
 });
