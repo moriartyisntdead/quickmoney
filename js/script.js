@@ -1,4 +1,9 @@
 $(function () {
+    if($(window).width() <= '425'){
+        $('.section3 div.col-md-5').removeClass('wow zoomInLeft zoomInRight');
+        $('.section3 .advantage-block').addClass('wow bounceIn');
+    }
+
     new WOW().init();
 
     $('.section4').parallax({imageSrc: '../img/bg.png'});
@@ -78,7 +83,7 @@ $(function () {
     $(".navbar").on("click", "a", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
-            top = $(id).offset().top - 90;
+            top = $(id).offset().top - 70;
         if (id == '#how-to-earn') top += 120;
         $('body,html').animate({scrollTop: top}, 800);
     });
