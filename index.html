@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="style/animate.css">
     <link rel="stylesheet" href="style/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl.theme.default.min.css">
-    <link rel="stylesheet" href="style/style.css?v=3">
+    <link rel="stylesheet" href="style/magnific-popup.css">
+    <link rel="stylesheet" href="style/style.css?v=9">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
@@ -18,11 +19,12 @@
     <script src="js/wow.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/script.js?v=2"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/script.js?v=9"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<header id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav"
@@ -32,10 +34,15 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="#"><img src="img/favicon.png" alt="logo" class="logo"></a>
+            <a href="#" class="lang visible-xs"><span>UA</span></a>
         </div>
 
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav">
+                <li class="visible-xs" style="padding-top: 5px;">
+                    <a href="#" class="cabinet"><span>Вход</span></a>
+                    <a href="#" class="registration"><span>Регистрация</span></a>
+                </li>
                 <li class="navbar-menu-item hidden-xs"><a href="#how-to-earn"><span>Как получить кредит</span></a></li>
                 <li class="navbar-menu-item hidden-xs"><a href="#how-to-return"><span>Как погасить кредит</span></a>
                 </li>
@@ -54,13 +61,14 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right hidden-xs">
                 <li><a href="#" class="lang"><span>UA</span></a></li>
-                <li><a href="#" class="cabinet"><span>Личный кабинет</span></a></li>
+                <li><a href="#" class="cabinet"><span>Вход</span></a></li>
+                <li><a href="#" class="registration"><span>Регистрация</span></a></li>
             </ul>
         </div>
     </div>
-</nav>
+</header>
 
 <section class="section1">
     <div class="container">
@@ -80,7 +88,7 @@
                 <a href="#" class="stock">Подробно об акции*</a>
             </div>
             <div class="col-md-4">
-                <div class="slider-wrapper">
+                <div class="sum-block">
                     <h3 class="green-text">Какая сумма вам нужна?</h3>
                     <input class="slider-input" id="sliderSum-input" type="text" value="500"> <span> грн</span>
                     <div class="slider-limits">
@@ -91,13 +99,32 @@
                     </div>
                     <div class="sliderControlButton slider-plus" data-type="plus" data-slider="sliderSum">
                     </div>
-                    <!--<div>-->
-                    <!--<span class="slider-minus" data-type="minus" data-slider="sliderSum"></span>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                    <!--<span class="slider-plus" data-type="plus" data-slider="sliderSum"></span>-->
-                    <!--</div>-->
-                    <div class="slider" id="sliderSum"></div>
+                    <div class="test-slider" style="width: 100%; padding: 0 71px 0 46px;">
+                        <div class="pseudo-helper" style="position: relative">
+                            <div class="slider" id="sliderSum" style="margin: 0; width: 65%;"></div>
+                        </div>
+                        <style>
+                            .slider{
+                                z-index: 1;
+                            }
+                            .pseudo-helper:after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                height: 8px;
+                                background-image: url(img/slider-limit-bg2.png);
+                                background-size: contain;
+                                background-repeat: repeat;
+                                background-color: #fff;
+                                width: 100%;
+                                border-right: 2px solid #ddd;
+                                border-top-right-radius: 3px;
+                                border-bottom-right-radius: 3px;
+                            }
+                        </style>
+                    </div>
                     <div class="get-money">
                         <button class="green-button">Получить деньги</button>
                     </div>
@@ -107,7 +134,7 @@
     </div>
 </section>
 
-<section class="section2" id="how-to-earn">
+<section class="how-to-earn" id="how-to-earn">
     <div class="container">
         <div class="row">
             <h1 class="title">
@@ -146,14 +173,14 @@
     </div>
 </section>
 
-<section class="section3">
+<section class="our-advantages" id="our-advantages">
     <div class="container">
         <div class="row">
             <h1 class="title">Наши преимущества</h1>
             <div class="long-line"></div>
             <div class="short-line"></div>
             <div class="col-md-5 col-md-offset-1 advantage-left wow zoomInLeft" data-wow-duration="1.5s">
-                <div class="advantage-block" data-wow-duration="1.5s">
+                <div class="advantage-block" data-wow-duration="2s">
                     <div class="advantage-picture"></div>
                     <div class="advantages-subtitle">
                         Быстро
@@ -161,7 +188,7 @@
                     <span>Деньги на банковскую карту поступят моментально</span>
                     <div class="clearfix"></div>
                 </div>
-                <div class="advantage-block" data-wow-duration="1.5s">
+                <div class="advantage-block" data-wow-duration="2s">
                     <div class="advantage-picture"></div>
                     <div class="advantages-subtitle">
                         Прозрачно
@@ -169,7 +196,7 @@
                     <span>Низкая процентная ставка по кредиту <br> Нет скрытой комиссии и скрытых платежей</span>
                     <div class="clearfix"></div>
                 </div>
-                <div class="advantage-block" data-wow-duration="1.5s">
+                <div class="advantage-block" data-wow-duration="2s">
                     <div class="advantage-picture"></div>
                     <div class="advantages-subtitle">
                         Безопасно
@@ -179,7 +206,7 @@
                 </div>
             </div>
             <div class="col-md-5 advantage-right wow zoomInRight" data-wow-duration="1.5s">
-                <div class="advantage-block" data-wow-duration="1.5s">
+                <div class="advantage-block" data-wow-duration="2s">
                     <div class="advantage-picture"></div>
                     <div class="advantages-subtitle">
                         Круглосуточно
@@ -187,7 +214,7 @@
                     <span>Моментальные переводы в режиме 24/7</span>
                     <div class="clearfix"></div>
                 </div>
-                <div class="advantage-block" data-wow-duration="1.5s">
+                <div class="advantage-block" data-wow-duration="2s">
                     <div class="advantage-picture"></div>
                     <div class="advantages-subtitle">
                         За несколько кликов
@@ -195,7 +222,7 @@
                     <span>Повторный кредит за минуту</span>
                     <div class="clearfix"></div>
                 </div>
-                <div class="advantage-block" data-wow-duration="1.5s">
+                <div class="advantage-block" data-wow-duration="2s">
                     <div class="advantage-picture"></div>
                     <div class="advantages-subtitle">
                         С любого устройства
@@ -208,7 +235,7 @@
     </div>
 </section>
 
-<section class="section4" id="how-to-return" data-parallax="scroll" data-image-src="img/bg.png">
+<section class="how-to-return" id="how-to-return" data-parallax="scroll" data-image-src="img/bg.png">
     <div class="container">
         <div class="row">
             <h1 class="title">Как погасить кредит в <span class="green-text">QUICK</span><span
@@ -225,14 +252,15 @@
             </div>
             <div class="col-md-4 wow bounceIn" data-wow-duration="2s">
                 <div class="dashed-img"></div>
-                В любом отделении <br> банка путем денежного <br> перевода на <a class="dotted-url" href="#">наши
+                В любом отделении <br> банка путем денежного <br> перевода на <a class="dotted-url requisites"
+                                                                                 href="#requisites-popup">наши
                 реквизиты</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section5">
+<section class="customers-feedback" id="customers-feedback">
     <div class="container">
         <div class="row">
             <h1 class="title">Отзывы наших клиентов</h1>
@@ -426,7 +454,7 @@
     </div>
 </section>
 
-<section class="section7">
+<section class="faq" id="faq">
     <div class="container">
         <h1 class="title">Часто задаваемые вопросы</h1>
         <div class="long-line"></div>
@@ -655,13 +683,13 @@
             <div class="col-lg-5 col-sm-4">
                 <p>
                     ТОВ "КВІК МАНІ", Код ЄДРПОУ 40849234 <br>
-                    Р/р ХХХХХХХХХХХХХХХ в ПАТ КБ "БАНК", МФО ХХХХХХ <br>
+                    Р/р ХХХХХХХХХХХХХХХ в ПАТ КБ "БАНК", <span class="sort-code">МФО ХХХХХХ</span> <br>
                     04053 г. Киев, ул. Оберваторная, 13/15
                 </p>
                 <a class="underline-link" href="#!">Дополнительная юридическая информация</a>
             </div>
             <div class="col-sm-3 text-right">
-                <a href="mailto:info@quickmoney.com.ua"><i class="fa fa-envelope"></i>info@quickmoney.com.ua</a>
+                <a href="mailto:info@quickmoney.com.ua"><i class="fa fa-envelope email"></i>info@quickmoney.com.ua</a>
             </div>
             <div class="col-sm-4 text-right">
                 <span class="number">063 564 0101</span><br>
@@ -693,6 +721,15 @@
 
 <div id="up-to-top" class="hidden-xs">
     <i class="fa fa-angle-up"></i>
+</div>
+
+<div id="requisites-popup" class="white-popup mfp-hide">
+    <div class="requisites-title">Банковские реквизиты</div>
+    <div class="requisites-text">
+        ТОВ "КВІК МАНІ", Код ЄДРПОУ 40849234 <br>
+        Р/р ХХХХХХХХХХХХХХХ в ПАТ КБ "БАНК", <span class="sort-code">МФО ХХХХХХ</span> <br>
+        04053 г. Киев, ул. Оберваторная, 13/15
+    </div>
 </div>
 
 </body>

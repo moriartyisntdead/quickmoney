@@ -1,12 +1,18 @@
 $(function () {
+    // 360/375
     if($(window).width() <= '425'){
-        $('.section3 div.col-md-5').removeClass('wow zoomInLeft zoomInRight');
-        $('.section3 .advantage-block').addClass('wow bounceIn');
+        $('.our-advantages div.col-md-5').removeClass('wow zoomInLeft zoomInRight');
+        $('.our-advantages .advantage-block').addClass('wow bounceIn');
+        // $('header').removeClass('navbar-fixed-top');
     }
+
+    $('.requisites').magnificPopup({
+        type: 'inline'
+    });
 
     new WOW().init();
 
-    $('.section4').parallax({imageSrc: '../img/bg.png'});
+    $('.how-to-return').parallax({imageSrc: '../img/bg.png'});
     $('.section8').parallax({imageSrc: '../img/bg2.png'});
 
     var countCarouselItem = $(".owl-carousel .item").length;
@@ -26,10 +32,10 @@ $(function () {
             0: {
                 items: 1
             },
-            426: {
+            768: {
                 items: 2
             }
-        },
+        }
         //onTranslate: function(e){
         //    var ml = 300+(longLineWidth/countCarouselItem*(e.item.index));
         //    $shortLine.animate({
@@ -38,25 +44,25 @@ $(function () {
         //}
     });
 
-
     $('#sliderSum').slider({
         orientation: "horizontal",
         range: "min",
-        max: 1000,
+        max: 3000,
         min: 0,
         step: 50,
-        value: 500,
+        value: 1500,
         change: function (event, ui) {
             $('#sliderSum-input').val(ui.value);
         },
         slide: function (event, ui) {
-            $('#sliderSum-input').html(ui.value);
+            $('#sliderSum-input').val(ui.value);
         }
     });
 
     $('#sliderSum').draggable();
 
     $('#sliderSum-input').change(function () {
+        // $('#sliderSum-input').change(function () {
         var sliderName = $(this).prop('id');
         sliderName = sliderName.substr(0, sliderName.length - 6);
         $('#' + sliderName).slider({
@@ -95,17 +101,21 @@ $(function () {
     //     if ($(this).data('h')) $(this).data('h', 0).scrollTop($(this).scrollTop() - 90);
     // });
 
-
     //Кнопка «Вверх»
     var offset = 450;
     var duration = 500;
     var upToTop = $("#up-to-top");
+    var $HEADER = $('header');
     upToTop.hide();
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > offset) {
             upToTop.fadeIn(duration);
+            $HEADER.addClass('scrolling');
+            $HEADER.find('.logo').attr('src', 'img/favicon_only_logo.png');
         } else {
             upToTop.fadeOut(duration);
+            $HEADER.removeClass('scrolling');
+            $HEADER.find('.logo').attr('src', 'img/favicon.png');
         }
     });
 
@@ -115,7 +125,7 @@ $(function () {
         return false;
     });
 
-    var docElem = document.documentElement, didScroll = false, changeHeaderOn = 300;
+    /*var docElem = document.documentElement, didScroll = false, changeHeaderOn = 300;
     function headerScroll() {
         window.addEventListener( 'scroll', function( event ) {
             if( !didScroll ) {
@@ -126,10 +136,12 @@ $(function () {
                     if ( sy >= changeHeaderOn ) {
                         $NAV.addClass('scrolling');
                         $NAV.find('.logo').attr('src', 'img/favicon_only_logo.png');
+                        // $NAV.find('.logo').attr('src', 'img/favicon_only_logo.png');
                     }
                     else {
                         $NAV.removeClass('scrolling');
                         $NAV.find('.logo').attr('src', 'img/favicon.png');
+                        // $NAV.find('.logo').attr('src', 'img/favicon.png');
                     }
                     didScroll = false;
                     }, 250 );
@@ -140,5 +152,5 @@ $(function () {
         return window.pageYOffset || docElem.scrollTop;
     }
 
-    headerScroll();
+    headerScroll();*/
 });
