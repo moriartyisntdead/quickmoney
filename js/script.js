@@ -12,8 +12,8 @@ $(function () {
 
     new WOW().init();
 
-    $('.how-to-return').parallax({imageSrc: '../img/bg.png'});
-    $('.section8').parallax({imageSrc: '../img/bg2.png'});
+    $('.how-to-return').parallax({imageSrc: '../images/landing/bg.png'});
+    $('.section8').parallax({imageSrc: '../images/landing/bg2.png'});
 
     var countCarouselItem = $(".owl-carousel .item").length;
     //var longLineWidth = parseInt($(".section5 .long-line").css('width'));
@@ -87,19 +87,11 @@ $(function () {
 
     //Скролл с фиксированной шапкой
     $(".navbar").on("click", "a", function (event) {
-        event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top - 70;
         if (id == '#how-to-earn') top += 120;
         $('body,html').animate({scrollTop: top}, 800);
     });
-
-    // $('a').on('click', function () {
-    //     if (this.hash) $(document).data('h', 1);
-    // });
-    // $(document).scroll(function () {
-    //     if ($(this).data('h')) $(this).data('h', 0).scrollTop($(this).scrollTop() - 90);
-    // });
 
     //Кнопка «Вверх»
     var offset = 450;
@@ -111,11 +103,11 @@ $(function () {
         if ($(this).scrollTop() > offset) {
             upToTop.fadeIn(duration);
             $HEADER.addClass('scrolling');
-            $HEADER.find('.logo').attr('src', 'img/favicon_only_logo.png');
+            $HEADER.find('.logo').attr('src', 'images/landing/favicon_only_logo.png');
         } else {
             upToTop.fadeOut(duration);
             $HEADER.removeClass('scrolling');
-            $HEADER.find('.logo').attr('src', 'img/favicon.png');
+            $HEADER.find('.logo').attr('src', 'images/landing/favicon.png');
         }
     });
 
@@ -124,33 +116,4 @@ $(function () {
         $('html, body').animate({scrollTop: 0}, duration);
         return false;
     });
-
-    /*var docElem = document.documentElement, didScroll = false, changeHeaderOn = 300;
-    function headerScroll() {
-        window.addEventListener( 'scroll', function( event ) {
-            if( !didScroll ) {
-                didScroll = true;
-                setTimeout(function () {
-                    var sy = scrollY();
-                    var $NAV = $('nav');
-                    if ( sy >= changeHeaderOn ) {
-                        $NAV.addClass('scrolling');
-                        $NAV.find('.logo').attr('src', 'img/favicon_only_logo.png');
-                        // $NAV.find('.logo').attr('src', 'img/favicon_only_logo.png');
-                    }
-                    else {
-                        $NAV.removeClass('scrolling');
-                        $NAV.find('.logo').attr('src', 'img/favicon.png');
-                        // $NAV.find('.logo').attr('src', 'img/favicon.png');
-                    }
-                    didScroll = false;
-                    }, 250 );
-            }
-        }, false );
-    }
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
-
-    headerScroll();*/
 });

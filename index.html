@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl.theme.default.min.css">
     <link rel="stylesheet" href="style/magnific-popup.css">
-    <link rel="stylesheet" href="style/style.css?v=9">
+    <link rel="stylesheet" href="style/style.css?v=11">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
@@ -20,7 +20,7 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/script.js?v=9"></script>
+    <script src="js/script.js?v=11"></script>
 </head>
 <body>
 
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#"><img src="img/favicon.png" alt="logo" class="logo"></a>
+            <a href="#"><img src="images/landing/favicon.png" alt="logo" class="logo"></a>
             <a href="#" class="lang visible-xs"><span>UA</span></a>
         </div>
 
@@ -47,7 +47,9 @@
                 <li class="navbar-menu-item hidden-xs"><a href="#how-to-return"><span>Как погасить кредит</span></a>
                 </li>
                 <li class="navbar-menu-item"><a href="#"><span>О нас</span></a></li>
+                <hr class="visible-xs">
                 <li class="navbar-menu-item"><a href="#"><span>Новости</span></a></li>
+                <hr class="visible-xs">
                 <li class="navbar-menu-item"><a href="#"><span>Справка</span></a></li>
                 <li role="presentation" class="dropdown navbar-menu-item hidden-xs">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -84,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="img/gifts.png" alt="gifts" class="gifts">
+                <img src="images/landing/gifts.png" alt="gifts" class="gifts">
                 <a href="#" class="stock">Подробно об акции*</a>
             </div>
             <div class="col-md-4">
@@ -99,26 +101,51 @@
                     </div>
                     <div class="sliderControlButton slider-plus" data-type="plus" data-slider="sliderSum">
                     </div>
-                    <div class="test-slider" style="width: 100%; padding: 0 71px 0 46px;">
-                        <div class="pseudo-helper" style="position: relative">
-                            <div class="slider" id="sliderSum" style="margin: 0; width: 65%;"></div>
-                        </div>
+                    <div class="slider-wrapper">
+                        <!--<div style="width: 100%; padding: 0 71px 0 46px;">-->
+                        <!--<div class="pseudo-helper" style="position: relative">-->
+                        <div class="slider" id="sliderSum" style="margin: 0; width: 55%;"></div>
+                        <!--</div>-->
                         <style>
-                            .slider{
+
+                            header hr{
+                                margin: 0 auto;
+                                border-color: #d1d1d1;
+                                max-width: 200px;
+                            }
+
+                            .slider-wrapper {
+                                width: 100%;
+                                padding: 0 46px;
+                            }
+
+                            .slider {
+                                z-index: 2;
+                            }
+
+                            .slider:before{
+                                content: "";
+                                width: 14px;
+                                height: 14px;
+                                position: absolute;
+                                background-image: url(images/landing/slider-ellipse.png);
+                                top: -4px;
+                                right: -12px;
                                 z-index: 1;
                             }
-                            .pseudo-helper:after {
+
+                            .slider:after {
                                 content: "";
                                 position: absolute;
-                                left: 0;
-                                right: 0;
-                                top: 0;
+                                left: 102%;
+                                /*right: 0;*/
+                                top: -1px;
                                 height: 8px;
-                                background-image: url(img/slider-limit-bg2.png);
+                                background-image: url(images/landing/slider-limit-bg2.png);
                                 background-size: contain;
                                 background-repeat: repeat;
                                 background-color: #fff;
-                                width: 100%;
+                                width: 81%;
                                 border-right: 2px solid #ddd;
                                 border-top-right-radius: 3px;
                                 border-bottom-right-radius: 3px;
@@ -235,7 +262,7 @@
     </div>
 </section>
 
-<section class="how-to-return" id="how-to-return" data-parallax="scroll" data-image-src="img/bg.png">
+<section class="how-to-return" id="how-to-return" data-parallax="scroll" data-image-src="images/landing/bg.png">
     <div class="container">
         <div class="row">
             <h1 class="title">Как погасить кредит в <span class="green-text">QUICK</span><span
@@ -270,7 +297,7 @@
             <div class="owl-carousel">
                 <div class="item">
                     <div class="review">
-                        <img src="img/test.png" class="review-photo" alt="review-photo"/>
+                        <img src="images/landing/test.png" class="review-photo" alt="review-photo"/>
                         <span class="review-title">Семен Кришталь</span>
                         <div class="review-date">27 июля 2017</div>
                         <div class="review-text">
@@ -282,7 +309,7 @@
                 </div>
                 <div class="item">
                     <div class="review">
-                        <img src="img/test.png" class="review-photo" alt="review-photo">
+                        <img src="images/landing/test.png" class="review-photo" alt="review-photo">
                         <span class="review-title">Елена Приймак</span>
                         <div class="review-date">2 августа 2017</div>
                         <div class="review-text">
@@ -293,7 +320,7 @@
                 </div>
                 <div class="item">
                     <div class="review">
-                        <img src="img/test.png" class="review-photo" alt="review-photo">
+                        <img src="images/landing/test.png" class="review-photo" alt="review-photo">
                         <span class="review-title">Олег Крючков</span>
                         <div class="review-date">13 сентября 2017</div>
                         <div class="review-text">
@@ -304,7 +331,7 @@
                 </div>
                 <div class="item">
                     <div class="review">
-                        <img src="img/test.png" class="review-photo" alt="review-photo"/>
+                        <img src="images/landing/test.png" class="review-photo" alt="review-photo"/>
                         <span class="review-title">Мария Жуковская</span>
                         <div class="review-date">5 мая 2017</div>
                         <div class="review-text">
@@ -315,7 +342,7 @@
                 </div>
                 <div class="item">
                     <div class="review">
-                        <img src="img/test.png" class="review-photo" alt="review-photo">
+                        <img src="images/landing/test.png" class="review-photo" alt="review-photo">
                         <span class="review-title">Алексей Плотник</span>
                         <div class="review-date">14 ноября 2017</div>
                         <div class="review-text">
@@ -327,7 +354,7 @@
                 </div>
                 <div class="item">
                     <div class="review">
-                        <img src="img/test.png" class="review-photo" alt="review-photo">
+                        <img src="images/landing/test.png" class="review-photo" alt="review-photo">
                         <span class="review-title">Василий Иванников</span>
                         <div class="review-date">25 октября 2017</div>
                         <div class="review-text">
@@ -347,7 +374,7 @@
     </div>
 </section>
 
-<section class="section6">
+<section class="otherRegions" id="otherRegions">
     <div class="container">
         <div class="row">
             <h1 class="title">Вы можете взять кредит в других регионах</h1>
@@ -650,7 +677,7 @@
     </div>
 </section>
 
-<section class="section9">
+<section class="interestRate" id="interestRate">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -677,7 +704,7 @@
     </div>
 </section>
 
-<section class="section10">
+<section class="sectionContacts" id="sectionContacts">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-sm-4">
@@ -704,7 +731,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img src="img/white_logo.png" alt="logo" class="logo">
+                <img src="images/landing/white_logo.png" alt="logo" class="logo">
                 <span class="company-name hidden-xs">© КВИКМАНИ 2017</span>
             </div>
 
