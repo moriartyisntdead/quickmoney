@@ -32,7 +32,6 @@ body {
 
 .navbar.navbar-default {
     height: 90px;
-    height: 90px;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
@@ -917,16 +916,6 @@ footer .logo {
     right: 9px;
 }
 
-@media all and (max-width: 426px) {
-    .short-line, .long-line {
-        display: none;
-    }
-
-    nav.navbar {
-        height: initial;
-    }
-}
-
 .owl-stage-outer {
     padding-bottom: 4px;
 }
@@ -1144,6 +1133,14 @@ a .fa.fa-envelope {
 }
 
 @media all and (max-width: 767px) {
+
+    nav.navbar {
+        height: initial;
+    }
+
+    .short-line, .long-line {
+        display: none;
+    }
     .navbar-collapse {
         background-color: rgb(255, 255, 255);
     }
@@ -1163,6 +1160,32 @@ a .fa.fa-envelope {
     .collapse.navbar-collapse {
         padding-top: 0;
     }
+
+    .navbar-default .navbar-collapse {
+        border: 0;
+    }
+
+    footer .logo {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    footer .company-name {
+        margin-top: 15px;
+    }
+
+    .email {
+        padding: 15px 0;
+    }
+
+    .question-text {
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+}
+
+@media all and (max-width: 600px) {
+
 }
 
 @media all and (max-width: 425px) {
@@ -1172,10 +1195,6 @@ a .fa.fa-envelope {
         max-width: 130px;
         margin-bottom: 10px;
         padding: 4px 0 0
-    }
-
-    .email {
-        padding: 15px 0;
     }
 
     .sort-code {
@@ -1198,16 +1217,8 @@ a .fa.fa-envelope {
         top: 5px;
     }
 
-    footer .company-name {
-        margin-top: 15px;
-    }
-
     .video-wrapper {
         height: 260px;
-    }
-
-    .navbar-default .navbar-collapse {
-        border: 0;
     }
 
     .navbar-default .navbar-nav > li.navbar-menu-item > a:hover {
@@ -1281,16 +1292,6 @@ a .fa.fa-envelope {
 
     .owl-carousel {
         padding: 0 32px 0;
-    }
-
-    .question-text {
-        padding-left: 15px;
-        padding-right: 20px;
-    }
-
-    footer .logo {
-        display: block;
-        margin: 0 auto 10px;
     }
 
 }
