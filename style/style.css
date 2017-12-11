@@ -48,6 +48,10 @@ body {
     transition: all 1s;
 }
 
+.navbar.navbar-default.scrolling  .logo{
+    margin-top: 8px;
+}
+
 .section1 {
     background-image: url(../images/landing/section1.png);
     background-size: cover;
@@ -1141,7 +1145,7 @@ a .fa.fa-envelope {
     }
 
     .social-link {
-        padding-top: 6px;
+        padding-top: 5px;
     }
 
     nav.navbar {
@@ -1364,7 +1368,7 @@ a .fa.fa-envelope {
 .page-title {
     background-image: url(../images/landing/section1.png);
     background-size: cover;
-    color: #fff;
+    color: #000;
     text-align: center;
     margin-top: 90px;
     background-position: bottom;
@@ -1378,7 +1382,8 @@ a .fa.fa-envelope {
 
 .info {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    text-align: justify;
 }
 
 .info-subtitle {

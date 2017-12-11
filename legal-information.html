@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Юридическая информация</title>
+    <title>QUICKMONEY</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/jquery-ui.min.css">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl.theme.default.min.css">
     <link rel="stylesheet" href="style/magnific-popup.css">
-    <link rel="stylesheet" href="style/style.css?v=10">
+    <link rel="stylesheet" href="style/style.css?v=u">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
@@ -20,11 +20,10 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/script.js?v=10"></script>
-    <style>
-    </style>
+    <script src="js/script.js?v=q"></script>
 </head>
 <body>
+
 <header id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -40,10 +39,12 @@
 
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav">
+                <hr class="visible-xs">
                 <li class="visible-xs">
                     <a href="#" class="cabinet"><span>Вход</span></a>
                     <a href="#" class="registration"><span>Регистрация</span></a>
                 </li>
+                <hr class="visible-xs">
                 <li class="navbar-menu-item hidden-xs"><a href="#how-to-earn"><span>Как получить кредит</span></a></li>
                 <li class="navbar-menu-item hidden-xs"><a href="#how-to-return"><span>Как погасить кредит</span></a>
                 </li>
@@ -115,28 +116,32 @@
                 <p>У стані банкрутства, санації чи ліквідації ТОВ «KВІК МАНІ» не перебуває.
                 У стані припинення ТОВ «KВІК МАНІ» не перебуває.
                 </p>
-                <p>ПРАВИЛА надання ТОВАРИСТВОМ З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «KВІК МАНІ»  фінансових кредитів</p>
+                <p><a href="">ПРАВИЛА надання ТОВАРИСТВОМ З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «KВІК МАНІ»  фінансових кредитів</a></p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="sectionContacts" id="sectionContacts">
+<section class="sectionContacts" id="sectionContacts" itemscope itemtype="http://schema.org/Organization">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-sm-4">
-                <p>
-                    ТОВ "КВІК МАНІ", Код ЄДРПОУ 40849234 <br>
-                    Р/р ХХХХХХХХХХХХХХХ в ПАТ КБ "БАНК", <span class="sort-code">МФО ХХХХХХ</span> <br>
-                    04053 г. Киев, ул. Оберваторная, 13/15
-                </p>
+                <!--<p>-->
+                <span itemprop="name">ТОВ "КВІК МАНІ"</span>, Код ЄДРПОУ 40849234 <br>
+                Р/р ХХХХХХХХХХХХХХХ в ПАТ КБ "БАНК", <span class="sort-code">МФО ХХХХХХ</span> <br>
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="postalCode">04053</span>
+                    <span itemprop="addressLocality">г. Киев</span>,
+                    <span itemprop="streetAddress">ул. Оберваторная, 13/15</span>
+                </div>
+                <!--</p>-->
                 <a class="underline-link" href="#!">Дополнительная юридическая информация</a>
             </div>
             <div class="col-sm-3 text-right">
-                <a href="mailto:info@quickmoney.com.ua"><i class="fa fa-envelope email"></i>info@quickmoney.com.ua</a>
+                <a href="mailto:info@quickmoney.com.ua"><i class="fa fa-envelope email"></i><span itemprop="email">info@quickmoney.com.ua</span></a>
             </div>
             <div class="col-sm-4 text-right">
-                <span class="number">063 564 0101</span><br>
+                <span class="number" itemprop="telephone">063 564 0101</span><br>
                 <span class="number">063 564 0101</span><br>
                 <span class="number">063 564 0101</span>
             </div>
@@ -151,12 +156,11 @@
                 <img src="images/landing/white_logo.png" alt="logo" class="logo">
                 <span class="company-name hidden-xs">© КВИКМАНИ 2017</span>
             </div>
-
             <div class="col-sm-6 social-block">
-                <a class="social-link" href="javascript:void(1)"><i class="fa fa-google-plus"
-                                                                    aria-hidden="true"></i></a>
-                <a class="social-link" href="javascript:void(1)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a class="social-link" href="javascript:void(1)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a class="social-link" href=""><i class="fa fa-google-plus"
+                                                  aria-hidden="true"></i></a>
+                <a class="social-link" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a class="social-link" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <span class="company-name visible-xs">© КВИКМАНИ 2017</span>
             </div>
         </div>
