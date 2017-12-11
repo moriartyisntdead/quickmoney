@@ -1,6 +1,6 @@
 $(function () {
     // 360/375
-    if($(window).width() <= '425'){
+    if($(window).width() <= '767'){
         $('.our-advantages div.col-md-5').removeClass('wow zoomInLeft zoomInRight');
         $('.our-advantages .advantage-block').addClass('wow bounceIn');
         // $('header').removeClass('navbar-fixed-top');
