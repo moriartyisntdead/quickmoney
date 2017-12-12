@@ -590,6 +590,7 @@ div .green-text {
 
 .customers-feedback .green-button {
     margin-top: 18px;
+    width: 100%
 }
 
 .otherRegions {
@@ -776,6 +777,10 @@ footer .logo {
 
 .faq {
     padding-bottom: 67px;
+}
+
+.faq .green-button{
+    width: 100%;
 }
 
 .toggle-cities {
