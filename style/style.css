@@ -48,7 +48,7 @@ body {
     transition: all 1s;
 }
 
-.navbar.navbar-default.scrolling  .logo{
+.navbar.navbar-default.scrolling .logo {
     margin-top: 8px;
 }
 
@@ -1389,4 +1389,86 @@ a .fa.fa-envelope {
 .info-subtitle {
     display: block;
     font-weight: bold;
+}
+
+.dropdown-menu {
+    transition: none;
+}
+
+.rules-title {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px auto;
+    padding: 0 25px;
+}
+
+.rules-subtitle {
+    text-transform: uppercase;
+}
+
+.underline-item {
+    text-decoration: underline;
+}
+
+.cyrillic {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.cyrillic li::before {
+    margin-right: 5px;
+    width: 1em;
+    text-align: right;
+    display: inline-block;
+}
+
+.cyrillic > li:nth-child(1)::before {
+    content: 'а) ';
+}
+
+.cyrillic > li:nth-child(2)::before {
+    content: 'б) ';
+}
+
+.cyrillic > li:nth-child(3)::before {
+    content: 'в) ';
+}
+
+.cyrillic > li:nth-child(4)::before {
+    content: 'г) ';
+}
+
+.cyrillic > li:nth-child(4)::before {
+    content: 'ґ) ';
+}
+
+.cyrillic > li:nth-child(4)::before {
+    content: 'д) ';
+}
+
+.cyrillic > li:nth-child(4)::before {
+    content: 'е) ';
+}
+
+.list-dash {
+    list-style-type: none;
+    padding-left: 22px;
+}
+
+.list-dash > li:before {
+    content: "—"
+}
+
+.error-404{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.img-404{
+    max-width: 100%;
+    margin-bottom: 35px;
 }
