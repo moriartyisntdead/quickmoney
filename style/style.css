@@ -242,6 +242,7 @@ div .green-text {
     outline: none;
     cursor: pointer;
     box-shadow: 0px 1px 2px 0px rgba(35, 35, 34, 0.61) inset, 0px 1px 2px 0px rgba(35, 35, 34, 0.61);
+    margin-left: -15px;
 }
 
 .slider-input + span {
