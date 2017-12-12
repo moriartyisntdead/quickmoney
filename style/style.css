@@ -1461,14 +1461,62 @@ a .fa.fa-envelope {
     content: "—"
 }
 
-.error-404{
+.error-404 {
     text-align: center;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.img-404{
+.img-404 {
     max-width: 100%;
     margin-bottom: 35px;
+}
+
+.titleNews {
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    color: #3582bb;
+    font-weight: bold;
+    font-size: 16px;
+    height: 50px;
+}
+
+.titleNews a:hover, .readMore:hover {
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    color: #a2b6cf;
+    text-decoration: none;
+}
+
+.publishTime {
+    font-size: 15px;
+    padding-top: 5px;
+    margin: 5px 0;
+    color: #a2b6cf;
+    border-top: 1px dotted;
+    display: block;
+}
+
+p.article-preview {
+    color: #959595;
+    font-size: 15px;
+    margin-bottom: 5px;
+    height: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;;
+}
+
+.post {
+    margin-bottom: 25px;
+}
+
+.post img{
+    max-width: 100%;
 }
