@@ -1635,6 +1635,7 @@ p.intro{
 }
 
 .moreArticles:hover {
+    text-decoration: none;
     background-color: transparent;
     color: #000;
     transition: all 400ms ease;

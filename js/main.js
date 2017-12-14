@@ -22,24 +22,26 @@ $(function () {
         $('.section8').parallax({imageSrc: '../images/landing/bg2.png'});
     }
 
-    var countCarouselItem = $(".owl-carousel .item").length;
-    $(".owl-carousel").owlCarousel({
-        nav: true,
-        navText: [$('.carousel-left'), $('.carousel-right')],
-        items: 2,
-        margin: 30,
-        dots: true,
-        slideBy: 2,
-        startPosition: Math.round(countCarouselItem / 2) - 1,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
+    if(typeof ($.fn.owlCarousel) !== 'undefined') {
+        var countCarouselItem = $(".owl-carousel .item").length;
+        $(".owl-carousel").owlCarousel({
+            nav: true,
+            navText: [$('.carousel-left'), $('.carousel-right')],
+            items: 2,
+            margin: 30,
+            dots: true,
+            slideBy: 2,
+            startPosition: Math.round(countCarouselItem / 2) - 1,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                }
             }
-        }
-    });
+        });
+    }
 
     if( typeof ($.fn.slider) !== 'undefined'){
         $('#sliderSum').slider({
