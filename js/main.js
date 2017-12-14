@@ -1,9 +1,14 @@
 $(function () {
     // 360/375
-    if($(window).width() <= '767'){
+    if($(window).width() <= '991' && $(window).width() >= '768'){
+        $('header > div.container').removeClass('container');
+        $('header > div').addClass('container-fluid');
+    }
+
+
+    if($(window).width() <= '991'){
         $('.our-advantages div.col-md-5').removeClass('wow zoomInLeft zoomInRight');
         $('.our-advantages .advantage-block').addClass('wow bounceIn');
-        // $('header').removeClass('navbar-fixed-top');
     }
 
     $('.requisites').magnificPopup({
@@ -18,36 +23,23 @@ $(function () {
     }
 
     var countCarouselItem = $(".owl-carousel .item").length;
-    //var longLineWidth = parseInt($(".section5 .long-line").css('width'));
-    //var shortLineWidth = longLineWidth/Math.round(countCarouselItem/2);
-    //var $shortLine = $(".section5 .short-line");
-    //$shortLine.css('width', shortLineWidth+'px');
-
-    if( typeof ($.fn.owlCarousel) !== 'undefined'){
-        $(".owl-carousel").owlCarousel({
-            nav: true,
-            navText: [$('.carousel-left'), $('.carousel-right')],
-            items: 2,
-            margin: 30,
-            dots: true,
-            slideBy: 2,
-            startPosition: Math.round(countCarouselItem / 2) - 1,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                }
+    $(".owl-carousel").owlCarousel({
+        nav: true,
+        navText: [$('.carousel-left'), $('.carousel-right')],
+        items: 2,
+        margin: 30,
+        dots: true,
+        slideBy: 2,
+        startPosition: Math.round(countCarouselItem / 2) - 1,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
             }
-            //onTranslate: function(e){
-            //    var ml = 300+(longLineWidth/countCarouselItem*(e.item.index));
-            //    $shortLine.animate({
-            //        'margin-left': ml+'px'
-            //    }, 300);
-            //}
-        });
-    }
+        }
+    });
 
     if( typeof ($.fn.slider) !== 'undefined'){
         $('#sliderSum').slider({
@@ -75,7 +67,6 @@ $(function () {
 
 
     $('#sliderSum-input').change(function () {
-        // $('#sliderSum-input').change(function () {
         var sliderName = $(this).prop('id');
         sliderName = sliderName.substr(0, sliderName.length - 6);
         $('#' + sliderName).slider({
@@ -139,7 +130,7 @@ $(function () {
         $('section.info').css({
             'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder,
         });
-    };
+    }
     footerToBottom();
     $(window).resize(function () {
         footerToBottom();
