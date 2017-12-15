@@ -1,5 +1,4 @@
 $(function () {
-    // 360/375
     if($(window).width() <= '991' && $(window).width() >= '768'){
         $('header > div.container').removeClass('container');
         $('header > div').addClass('container-fluid');
@@ -7,8 +6,7 @@ $(function () {
 
 
     if($(window).width() <= '991'){
-        $('.our-advantages div.col-md-5').removeClass('wow zoomInLeft zoomInRight');
-        $('.our-advantages .advantage-block').addClass('wow bounceIn');
+        $('.advantage-block').removeClass('zoomInLeft zoomInRight').addClass('bounceIn');
     }
 
     $('.requisites').magnificPopup({
