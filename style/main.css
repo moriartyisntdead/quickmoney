@@ -1405,8 +1405,8 @@ a .fa.fa-envelope {
 
     ul.nav.navbar-nav.navbar-right > li:nth-of-type(1) {
         position: absolute;
-        top: 22px;
-        left: -53px;
+        top: 24px;
+        left: -40px;
     }
 
     .navbar.navbar-default.scrolling {
@@ -1440,15 +1440,14 @@ a .fa.fa-envelope {
 }
 
 .page-title div.title {
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #000;
 }
 
 .info {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 40px;
-    text-align: justify;
 }
 
 .info-subtitle {
@@ -1598,7 +1597,7 @@ p.article-preview {
 }
 
 p.intro{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 15px !important;
     color: #747474;
     line-height: 18px;

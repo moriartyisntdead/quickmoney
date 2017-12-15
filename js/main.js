@@ -65,9 +65,6 @@ $(function () {
     }
 
 
-
-
-
     $('#sliderSum-input').change(function () {
         var sliderName = $(this).prop('id');
         sliderName = sliderName.substr(0, sliderName.length - 6);
