@@ -461,51 +461,47 @@ div.title {
     font-size: 16px;
 }
 
-.advantage-left {
+.our-advantages {
+    padding-bottom: 72px;
+}
+
+.our-advantages .row > .advantage-block:nth-child(1){
     text-align: right;
 }
 
-.advantage-left, .advantage-right {
-    margin-bottom: 72px;
-}
-
-.advantage-left .advantage-block:nth-of-type(1) .advantage-picture {
-    background: url(../images/landing/1.png) 24px 23px no-repeat #FFF;
-}
-
-.advantage-left .advantage-block:nth-of-type(2) .advantage-picture {
-    background: url(../images/landing/2.png) 24px 23px no-repeat #FFF;
-
-}
-
-.advantage-left .advantage-block:nth-of-type(3) .advantage-picture {
-    background: url(../images/landing/3.png) 26px 25px no-repeat #FFF;
-}
-
-.advantage-left .advantage-block:nth-of-type(1) .advantage-picture,
-.advantage-left .advantage-block:nth-of-type(2) .advantage-picture,
-.advantage-left .advantage-block:nth-of-type(3) .advantage-picture {
+.our-advantages .row > .advantage-block:nth-child(1) > .advantage-picture:nth-of-type(1) {
     float: right;
-    margin-left: 30px;
+    margin-left: 32px;
 }
 
-.advantage-right .advantage-block:nth-of-type(1) .advantage-picture {
-    background: url(../images/landing/4.png) 24px 24px no-repeat #FFF;
-}
-
-.advantage-right .advantage-block:nth-of-type(2) .advantage-picture {
-    background: url(../images/landing/5.png) 24px 23px no-repeat #FFF;
-}
-
-.advantage-right .advantage-block:nth-of-type(3) .advantage-picture {
-    background: url(../images/landing/6.png) 24px 33px no-repeat #FFF;
-}
-
-.advantage-right .advantage-block:nth-of-type(1) .advantage-picture,
-.advantage-right .advantage-block:nth-of-type(2) .advantage-picture,
-.advantage-right .advantage-block:nth-of-type(3) .advantage-picture {
+.our-advantages .row > .advantage-block:nth-child(2) > .advantage-picture:nth-of-type(1) {
     float: left;
-    margin-right: 30px;
+    margin-right: 32px;
+}
+
+.advantage-picture{
+    margin-bottom: 20px;
+}
+
+.row:nth-of-type(4) > .advantage-block:nth-child(1) .advantage-picture{
+    background: url(images/landing/1.png) center center no-repeat #fff;
+}
+.row:nth-of-type(4) > .advantage-block:nth-child(2) .advantage-picture{
+    background: url(images/landing/4.png) center center no-repeat #fff;
+}
+
+.row:nth-of-type(5) > .advantage-block:nth-child(1) .advantage-picture{
+    background: url(images/landing/2.png) center center no-repeat #fff;
+}
+.row:nth-of-type(5) > .advantage-block:nth-child(2) .advantage-picture{
+    background: url(images/landing/5.png) center center no-repeat #fff;
+}
+
+.row:nth-of-type(6) > .advantage-block:nth-child(1) .advantage-picture{
+    background: url(images/landing/3.png) center center no-repeat #fff;
+}
+.row:nth-of-type(6) > .advantage-block:nth-child(2) .advantage-picture{
+    background: url(images/landing/6.png) center center no-repeat #fff;
 }
 
 .how-to-return {
@@ -1130,19 +1126,16 @@ a .fa.fa-envelope {
         margin-bottom: 0;
     }
 
-    .advantage-left .advantage-block:nth-of-type(1) .advantage-picture,
-    .advantage-left .advantage-block:nth-of-type(2) .advantage-picture,
-    .advantage-left .advantage-block:nth-of-type(3) .advantage-picture,
-    .advantage-right .advantage-block:nth-of-type(1) .advantage-picture,
-    .advantage-right .advantage-block:nth-of-type(2) .advantage-picture,
-    .advantage-right .advantage-block:nth-of-type(3) .advantage-picture {
-        margin: 0 auto 10px;
-        float: none;
+    .advantage-block{
+        text-align: center !important;
+    }
+    .advantage-picture{
+        float: none !important;
+        margin: 0 auto !important;
     }
 
-    .advantage-left, .advantage-right {
-        text-align: center;
-        margin-bottom: 36px;
+    .our-advantages{
+        padding: 0;
     }
 }
 
@@ -1642,4 +1635,19 @@ p.intro{
     -moz-transition: all 400ms ease;
     -ms-transition: all 400ms ease;
     -o-transition: all 400ms ease;
+}
+
+.B_crumbBox{
+    list-style: none;
+    font-size: 16px;
+    color: #1782cf;
+}
+.B_crumbBox li{
+    display: inline-block;
+}
+
+.B_currentCrumb {
+    pointer-events: none;
+    cursor: default;
+    color: #404244;
 }
