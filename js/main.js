@@ -17,7 +17,7 @@ $(function () {
 
     if( typeof ($.fn.parallax) !== 'undefined'){
         $('.how-to-return').parallax({imageSrc: '../images/landing/bg.png'});
-        $('.section8').parallax({imageSrc: '../images/landing/bg2.png'});
+        $('.seoText').parallax({imageSrc: '../images/landing/bg2.png'});
     }
 
     if(typeof ($.fn.owlCarousel) !== 'undefined') {
