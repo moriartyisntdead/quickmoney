@@ -88,9 +88,10 @@ $(function () {
 
     //Скролл с фиксированной шапкой
     $(".navbar").on("click", "a", function (event) {
-        var id = $(this).attr('href'),
-            top = $(id).offset().top - 70;
-        if (id == '#how-to-earn') top += 120;
+        var href = $(this).attr('href');
+        href = href.substring(href.indexOf('#'));
+        var top = $(href).offset().top - 63;
+        if (href == '#how-to-earn') top += 120;
         $('body,html').animate({scrollTop: top}, 800);
     });
 
@@ -104,11 +105,11 @@ $(function () {
         if ($(this).scrollTop() > offset) {
             upToTop.fadeIn(duration);
             $HEADER.addClass('scrolling');
-            $HEADER.find('.logo').attr('src', 'images/landing/favicon_only_logo.png');
+            $HEADER.find('.logo').attr('src', 'http://qmoney.com.ua/images/landing/favicon_only_logo.png');
         } else {
             upToTop.fadeOut(duration);
             $HEADER.removeClass('scrolling');
-            $HEADER.find('.logo').attr('src', 'images/landing/favicon.png');
+            $HEADER.find('.logo').attr('src', 'http://qmoney.com.ua/images/landing/favicon.png');
         }
     });
 
