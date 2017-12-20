@@ -463,6 +463,7 @@ h1.title {
 }
 
 .green-button:hover {
+    cursor: pointer;
     text-decoration: none;
     color: #fff;
     box-shadow: none;
