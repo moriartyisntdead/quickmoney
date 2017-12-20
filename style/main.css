@@ -6,6 +6,11 @@ body {
     font-family: 'HelveticaNeueCyr-Light';
 }
 
+.navbar-header{
+    position: relative;
+    z-index: 1;
+}
+
 @font-face {
     font-family: 'HelveticaNeueCyr-Light';
     src: url(../fonts/HelveticaNeueCyr-Light.eot),
@@ -85,7 +90,14 @@ a.cabinet span {
     -o-transition: all 400ms ease;
 }
 
-a.cabinet span:hover {
+a.cabinet:focus,
+a.registration:focus{
+    outline: none;
+}
+
+a.cabinet span:hover,
+a.cabinet span:focus{
+    outline: none;
     background-color: #95d723;
     color: #fff;
     transition: all 400ms ease;
@@ -109,7 +121,9 @@ a.registration span {
     -o-transition: all 400ms ease;
 }
 
-a.registration span:hover {
+a.registration span:hover,
+a.registration span:focus{
+    outline: none;
     background-color: transparent;
     color: #000;
     transition: all 400ms ease;
@@ -1142,6 +1156,10 @@ a .fa.fa-envelope {
 
 @media all and (max-width: 1199px) {
 
+    div.title{
+        padding: 0 80px;
+    }
+
     .video-wrapper {
         text-align: center;
         max-width: 100%;
@@ -1347,6 +1365,10 @@ a .fa.fa-envelope {
     .video {
         width: 51%;
     }
+
+    div.title{
+        padding: 0 55px;
+    }
 }
 
 @media all and (max-width: 710px) {
@@ -1362,6 +1384,10 @@ a .fa.fa-envelope {
 
     .ol {
         padding-left: 170px;
+    }
+
+    div.title{
+        padding: 0 30px;
     }
 }
 
@@ -1855,7 +1881,9 @@ p.intro {
     -o-transition: all 400ms ease;
 }
 
-.tookLoan:hover {
+.tookLoan:hover,
+.tookLoan:focus {
+    outline: none;
     text-decoration: none;
     background-color: transparent;
     color: #000;
@@ -1880,7 +1908,9 @@ p.intro {
     -o-transition: all 400ms ease;
 }
 
-.moreArticles:hover {
+.moreArticles:hover,
+.moreArticles:focus{
+    outline: none;
     text-decoration: none;
     background-color: #95d723;
     color: #fff;

@@ -1,11 +1,11 @@
 $(function () {
-    if($(window).width() <= '991' && $(window).width() >= '768'){
+    if ($(window).width() <= '991' && $(window).width() >= '768') {
         $('header > div.container').removeClass('container');
         $('header > div').addClass('container-fluid');
     }
 
 
-    if($(window).width() <= '991'){
+    if ($(window).width() <= '991') {
         $('.advantage-block').removeClass('zoomInLeft zoomInRight').addClass('bounceIn');
     }
 
@@ -15,12 +15,12 @@ $(function () {
 
     new WOW().init();
 
-    if( typeof ($.fn.parallax) !== 'undefined'){
+    if (typeof ($.fn.parallax) !== 'undefined') {
         $('.how-to-return').parallax({imageSrc: '../images/landing/bg.png'});
         $('.seoText').parallax({imageSrc: '../images/landing/bg2.png'});
     }
 
-    if(typeof ($.fn.owlCarousel) !== 'undefined') {
+    if (typeof ($.fn.owlCarousel) !== 'undefined') {
         var countCarouselItem = $(".owl-carousel .item").length;
         $(".owl-carousel").owlCarousel({
             nav: true,
@@ -41,7 +41,7 @@ $(function () {
         });
     }
 
-    if( typeof ($.fn.slider) !== 'undefined'){
+    if (typeof ($.fn.slider) !== 'undefined') {
         $('#sliderSum').slider({
             orientation: "horizontal",
             range: "min",
@@ -58,7 +58,7 @@ $(function () {
         });
     }
 
-    if( typeof ($.fn.draggable) !== 'undefined'){
+    if (typeof ($.fn.draggable) !== 'undefined') {
         $('#sliderSum').draggable();
     }
 
@@ -123,17 +123,17 @@ $(function () {
     // Перемещает футер вниз, если высота сайта слишком маленькая
     function footerToBottom() {
         var browserHeight = $(window).height(),
-            footerOuterHeight = $('footer').outerHeight(true)+$('section.sectionContacts').outerHeight(true),
-            mainHeightMarginPaddingBorder = ($('#navbar').outerHeight(true)+$('section.page-title').height());
+            footerOuterHeight = $('footer').outerHeight(true) + $('section.sectionContacts').outerHeight(true),
+            mainHeightMarginPaddingBorder = ($('#navbar').outerHeight(true) + $('section.page-title').height());
         $('section.info').css({
-            'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder,
+            'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder
         });
     }
+
     footerToBottom();
     $(window).resize(function () {
         footerToBottom();
     });
-
 
 
 });
