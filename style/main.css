@@ -654,7 +654,7 @@ h1.title {
     font-size: 14px;
     font-weight: bold;
     color: #666;
-    margin: 5px 0 6px;
+    margin: 5px 0 16px;
 }
 
 .review-text {
@@ -704,6 +704,7 @@ h1.title {
 }
 
 .question-title {
+    transition: all 300ms linear;
     font-size: 20px;
     background-color: #e6e6e6;
     text-transform: uppercase;
@@ -975,13 +976,13 @@ footer .logo {
 }
 
 .slider-minus {
-    background: url(../images/landing/slider-minus.png) no-repeat center center;
+    background: url(../images/landing/slider-minus.png) no-repeat center center #fff;
     float: left;
     left: 9px;
 }
 
 .slider-plus {
-    background: url(../images/landing/slider-plus.png) no-repeat center center;
+    background: url(../images/landing/slider-plus.png) no-repeat center center #fff;
     float: right;
     right: 9px;
 }
@@ -1041,6 +1042,11 @@ footer .logo {
     -moz-transition: all 400ms ease;
     -ms-transition: all 400ms ease;
     -o-transition: all 400ms ease;
+}
+
+.stock:focus {
+    color: #fff;
+    text-decoration: none;
 }
 
 .stock-star {
@@ -1530,7 +1536,7 @@ a .fa.fa-envelope {
 
     .review-photo {
         width: 100px !important;
-        margin: 0 auto;
+        margin: 15px auto;
         float: none;
     }
 
@@ -1941,4 +1947,54 @@ p.intro {
     pointer-events: none;
     cursor: default;
     color: #404244;
+}
+
+.panel-group.services .question-title{
+    font-size: 14px;
+    padding: 15px 38px 15px 15px;
+    margin-bottom: 7px;
+}
+
+.panel-group.services .question-text{
+    font-weight: normal;
+    padding-left: 24px;
+    padding-right: 5px;
+    list-style: none;
+    color: #1782cf;
+}
+
+.panel-group.services .question-text:hover,
+.panel-group.services .question-text:focus{
+    color: #1782cf;
+    text-decoration: none;
+}
+
+.panel-group.services .switch{
+    background: url(../images/landing/switch.png) center center no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 12px;
+    right: 13px;
+    top: 12px;
+}
+
+.regions .city{
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #0800ab;
+    padding: 10px 0;
+    background: none;
+    /*background: url(../images/landing/city-arrow.png) #f3f3f3 8px center no-repeat;*/
+    margin-top: 15px;
+}
+
+.regions .city:hover{
+    color: #fff;
+    border: 1px solid #0800dc61;
+    background-color: #0800dc61;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
