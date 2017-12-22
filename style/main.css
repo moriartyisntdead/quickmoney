@@ -6,7 +6,7 @@ body {
     font-family: 'HelveticaNeueCyr-Light';
 }
 
-.navbar-header{
+.navbar-header {
     position: relative;
     z-index: 1;
 }
@@ -91,12 +91,12 @@ a.cabinet span {
 }
 
 a.cabinet:focus,
-a.registration:focus{
+a.registration:focus {
     outline: none;
 }
 
 a.cabinet span:hover,
-a.cabinet span:focus{
+a.cabinet span:focus {
     outline: none;
     background-color: #95d723;
     color: #fff;
@@ -122,7 +122,7 @@ a.registration span {
 }
 
 a.registration span:hover,
-a.registration span:focus{
+a.registration span:focus {
     outline: none;
     background-color: transparent;
     color: #000;
@@ -1019,7 +1019,7 @@ footer .logo {
     padding: 5px 7px;
     font-size: 15px;
     position: absolute;
-    top: 350px;
+    top: 346px;
     right: -3px;
     border: 1px solid #fff;
     border-radius: 18px;
@@ -1163,7 +1163,11 @@ a .fa.fa-envelope {
 
 @media all and (max-width: 1199px) {
 
-    div.title{
+    .sum-block .green-text {
+        font-size: 22px;
+    }
+
+    div.title {
         padding: 0 80px;
     }
 
@@ -1250,6 +1254,10 @@ a .fa.fa-envelope {
 }
 
 @media all and (max-width: 991px) {
+
+    .sum-block .green-text{
+        font-size: 24px;
+    }
 
     .review {
         min-height: 366px;
@@ -1373,7 +1381,7 @@ a .fa.fa-envelope {
         width: 51%;
     }
 
-    div.title{
+    div.title {
         padding: 0 55px;
     }
 }
@@ -1393,7 +1401,7 @@ a .fa.fa-envelope {
         padding-left: 170px;
     }
 
-    div.title{
+    div.title {
         padding: 0 30px;
     }
 }
@@ -1867,7 +1875,7 @@ p.intro {
     margin: 0 auto;
 }
 
-.article-buttons{
+.article-buttons {
     text-align: center;
 }
 
@@ -1916,7 +1924,7 @@ p.intro {
 }
 
 .moreArticles:hover,
-.moreArticles:focus{
+.moreArticles:focus {
     outline: none;
     text-decoration: none;
     background-color: #95d723;
@@ -1949,13 +1957,13 @@ p.intro {
     color: #404244;
 }
 
-.panel-group.services .question-title{
+.panel-group.services .question-title {
     font-size: 14px;
     padding: 15px 38px 15px 15px;
     margin-bottom: 7px;
 }
 
-.panel-group.services .question-text{
+.panel-group.services .question-text {
     font-weight: normal;
     padding-left: 24px;
     padding-right: 5px;
@@ -1964,12 +1972,12 @@ p.intro {
 }
 
 .panel-group.services .question-text:hover,
-.panel-group.services .question-text:focus{
+.panel-group.services .question-text:focus {
     color: #1782cf;
     text-decoration: none;
 }
 
-.panel-group.services .switch{
+.panel-group.services .switch {
     background: url(../images/landing/switch.png) center center no-repeat;
     background-size: contain;
     width: 20px;
@@ -1978,17 +1986,16 @@ p.intro {
     top: 12px;
 }
 
-.regions .city{
+.regions .city {
     text-align: center;
     font-weight: bold;
     border: 1px solid #0800ab;
     padding: 10px 0;
     background: none;
-    /*background: url(../images/landing/city-arrow.png) #f3f3f3 8px center no-repeat;*/
     margin-top: 15px;
 }
 
-.regions .city:hover{
+.regions .city:hover {
     color: #fff;
     border: 1px solid #0800dc61;
     background-color: #0800dc61;
@@ -1997,4 +2004,27 @@ p.intro {
     -ms-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
+}
+
+.services .sum-block .green-text {
+    font-size: 18px;
+}
+
+.services .sum-block .slider-input + span {
+    font-size: 14px;
+}
+
+.services .sum-block .slider-input {
+    font-size: 36px;
+    max-width: 154px;
+}
+
+.regions .city {
+    font-size: 16px;
+}
+
+.services-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
