@@ -1236,6 +1236,18 @@ a .fa.fa-envelope {
     }
 }
 
+@media all and (min-width: 1025px){
+    .post img {
+        height: 204px;
+    }
+}
+
+@media all and (max-width: 1024px){
+    .post img {
+        height: 164px;
+    }
+}
+
 @media all and (max-width: 992px) {
 
     .video-wrapper {
@@ -1265,6 +1277,10 @@ a .fa.fa-envelope {
 }
 
 @media all and (max-width: 991px) {
+
+    .post img {
+        height: 120px;
+    }
 
     .sum-block .green-text{
         font-size: 24px;
@@ -1319,6 +1335,10 @@ a .fa.fa-envelope {
 }
 
 @media all and (max-width: 767px) {
+
+    .post img {
+        height: initial;
+    }
 
     .logo {
         margin-left: 25px;
@@ -1818,7 +1838,7 @@ a .fa.fa-envelope {
     color: #3582bb;
     font-weight: bold;
     font-size: 16px;
-    height: 50px;
+    height: 80px;
 }
 
 .titleNews a:hover, .readMore:hover {
